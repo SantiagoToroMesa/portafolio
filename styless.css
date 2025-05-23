@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    overflow: 
+    background-color white;
+    color: black;
+}
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 10vh;
+    padding: 1rem 9%;
+    background-color: rgba(0, 0, 0, 0.5);
+    filter: drop-shadow(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo{
+    font-size: 3rem;
+    color: rgb(0, 0, 0);
+    font-weight: 800;
+    cursor: pointer; 
+    transition:0,5s ease;
+}
+
+.logo:hover{
+    transform: scale(1.1)
+}
+
+nav a{
+    font-size: 1.8rem;
+    color: rgb(0, 0, 0);
+    margin-left: 4rem;
+    font-weight: 500;
+    transition: 0.3s ease;
+    border-bottom: 3px solid transparent;
+}
+nav a:hover,
+nav a.active{
+    color: rgb(0, 0, 0);
+    border-bottom: 3px solid rgb(149, 119, 178);
+}
+
+section{
+    min-height: 90vh;
+    padding:5rem 9% 5rem;
+}
+
+.home{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:8rem;
+    background-color: white;
+}
+.home .home-content h1{
+    font-size: 6rem;
+    font-weight: 700;
+    line-height: 1.3;
+}
+span{
+    color: rgb(149, 119, 178);
+}
+.home-content h3{
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+.home-img img{
+    position: relative;
+    width: 70vh;
+    height: 40vh;
+    border-radius: 20%;
+}
+.social-icons{
+    position: absolute;
+    top: -5wh;
+    left: -32%;
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
