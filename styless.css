@@ -94,10 +94,62 @@ span{
     border-radius: 20%;
 }
 .social-icons{
-    position: absolute;
-    top: -5wh;
-    left: -32%;
-    width: 100%;
-    height: 100%;
     display: flex;
+    position: relative;
+    top: -20%;
+    left: 42%;
+    width: 40%;
+    height: 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.social-icons a{
+    font-size: 4rem;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    transition: 0.3s;
+}
+.social-icons a:hover{
+    font-size: 4rem;
+    text-decoration: none;
+    color: rgb(149, 119, 178);
+}
+
+.contact-form {
+    background: rgba(0, 0, 0, 0.338);
+    padding: 3rem;
+    border-radius: 15px;
+    box-shadow: var(--box-shadow);
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-control {
+    width: 100%;
+    padding: 12px 20px;
+    border: 1px solid #e9ecef;
+    border-radius: 10px;
+    font-family: 'Poppins', sans-serif;
+}
+.botton{
+    display: block;
+    margin: 2rem auto 0 auto;
+    background-color: rgb(149, 119, 178);
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 10px;
+    font-size: 2rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+.contact-form-header{
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    color: rgb(0, 0, 0);
 }
