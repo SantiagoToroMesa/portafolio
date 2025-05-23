@@ -4,38 +4,75 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portafolio website</title>
+    <!--se conecta el archivo de estilos css-->
     <link rel="stylesheet" href="styless.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
     <header class="header">
-        <a href="#" class="logo">Portafolio</a>
+        <a href="#" class="logo">Portfolio</a>
         <nav>
+            <!--menú de navegación-->
             <a href="#"class="active">Home</a>
             <a href="#about">About</a>
-            <a href="#">Projects</a>
+            <a href="#projects">Projects</a>
             <a href="#contact">Contact</a>
         </nav>
     </header>
     <section class="home">
+        <!--presentación-->
         <div class="home-img">
             <img src="img/main.jpeg" alt="">
         </div>
-        <div class="home-content">
+        <div class="home-content" id="about">
             <h1>Hi, I'm <span>Santiago Toro</span></h1>
             <h3 class="text">I'm a <span>Riwi Developer</span></h3>
-            <h4 id="about">about me</h4>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Unde minima commodi optio magni saepe, laudantium neque earum error omnis nam vitae nemo nisi odio natus vel accusamus numquam inventore consectetur?</p>
+            <!--sobre mi-->
+            <h4 >about me</h4>
+            <!--descripción-->
+            <p>I am a 20-year-old from Medellín with a strong passion for technology in all its fields. I have experience in networking and cybersecurity, and I am currently focused on enhancing my skills as a developer. I am always seeking new challenges and opportunities to learn and grow professionally.</p>
         </div>
 
     </section>
+        <!--sección de redes personales para contacto-->
     <div class="social-icons">
+        <!--link a mi github personal-->
         <a href="https://github.com/SantiagoToroMesa"><i class="fab fa-github"></i></a>
+        <!--link a mi linkedin personal-->
         <a href="https://www.linkedin.com/in/santiago-toro-779302340/"><i class="fab fa-linkedin"></i></a>
-        <a href="#"><i class="fab fa-instagram"></i></a>
+        <!--link a mi instagram personal-->
+        <a href="https://www.instagram.com/brokeboi.sant/"><i class="fab fa-instagram"></i></a>
         <a href="enlace" target="_blank" ><i class="fab fa-twitter"></i></a>
     </div>
+    <section id="projects">
+        <!--sección de proyectos-->
+        <h2 class="projects-header">My Projects</h2>
+        <div class="projects">
+            <div class="project-card">
+                <img src="img/satisfacion_al_cliente.png" alt="">
+                <h3>Project 1</h3>
+                <p>a customer satisfaction survey developed in C#</p>
+                <a href="#"><i class="fas fa-code"></i></a>
+                <a href="https://github.com/SantiagoToroMesa/Encuesta_Satisfacion_Al_Cliente" class="btn">View Project</a>
+            </div>
+            <div class="project-card">
+                <img src="img/inventory_management.jpg" alt="">
+                <h3>Project 2</h3>
+                <p>an inventory management system developed in Python</p>
+                <a href="#"><i class="fab fa-python"></i></a>
+                <a href="https://github.com/SantiagoToroMesa/Entrenamiento_n3" class="btn">View Project</a>
+            </div>
+            <div class="project-card">
+                <img src="img/library_management.jpg" alt="">
+                <h3>Project 3</h3>
+                <p>a library management system developed in Python</p>
+                <a href="#"><i class="fab fa-python"></i></a>
+                <a href="https://github.com/SantiagoToroMesa/simulacro" class="btn">View Project</a>
+            </div>
+        </div>
+    </section>
     <div class="contact-form" id="contact">
+                <!--formulario de contacto-->
                 <div class="contact-form-header">
                     <h2>Contact Me</h2>
                 </div>
@@ -61,7 +98,7 @@
                             <textarea class="form-control" rows="5" placeholder="Message"></textarea>
                         </label>
                     </div>
-                    <button class="botton" type="submit" class="btn">Sent Message</button>
+                    <button class="botton" type="submit" class="btn">Send Message</button>
                 </form>
             </div>
         </div>
