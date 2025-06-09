@@ -20,8 +20,7 @@ html{
 body{
     width: 100%;
     height: 100vh;
-    overflow:
-    background-color white;
+    background-color: white;
     color: black;
 }
 
@@ -134,7 +133,6 @@ span{
     background: rgba(0, 0, 0, 0.338);
     padding: 3rem;
     border-radius: 15px;
-    box-shadow: var(--box-shadow);
 }
 
 /* Espaciado entre grupos de formulario */
@@ -198,7 +196,6 @@ span{
     height: 40rem;
     background-color: white;
     border-radius: 20px;
-    box-shadow: var(--box-shadow);
     padding: 2rem;
     text-align: center;
 }
@@ -208,5 +205,111 @@ span{
     width: 100%;
     height: 20rem;
     border-radius: 20px;
+}
+
+.menu-toggle {
+    font-size: 2.5rem;
+    cursor: pointer;
+    display: none;  /* Oculto por defecto en desktop */
+    z-index: 101;
+    color: black;
+    background: none;
+    border: none;
+    padding: 0.5rem;
+}
+
+.menu-toggle i {
+    color: black;
+    font-size: 2.5rem;
+}
+
+/* Media Queries para diseño responsive */
+@media (max-width: 768px) {
+    html {
+        font-size: 55%;
+    }
+
+    header {
+        padding: 1rem 4%;
+    }
+
+    .menu-toggle {
+        display: block;  /* Mostrar el botón de menú en móvil */
+    }
+
+    nav {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 1rem 4%;
+        background: rgba(0, 0, 0, 0.5);
+        display: none;
+    }
+
+    nav.active {
+        display: block;
+    }
+
+    nav a {
+        display: block;
+        margin: 2rem 0;
+        text-align: center;
+    }
+
+    .home {
+        flex-direction: column-reverse;
+        padding-top: 10rem;
+        gap: 3rem;
+    }
+
+    .home-img img {
+        width: 90vw;
+        height: auto;
+    }
+
+    .home-content h1 {
+        font-size: 4rem;
+    }
+
+    .home-content h3 {
+        font-size: 2.5rem;
+    }
+
+    .social-icons {
+        position: static;
+        width: 100%;
+        margin: 2rem 0;
+    }
+
+    .projects {
+        flex-direction: column;
+        gap: 3rem;
+    }
+
+    .project-card {
+        width: 90%;
+        height: auto;
+    }
+
+    .contact-form {
+        width: 90%;
+        margin: 0 auto;
+    }
+}
+
+/* Media query para dispositivos más pequeños */
+@media (max-width: 450px) {
+    html {
+        font-size: 50%;
+    }
+
+    .home-content h1 {
+        font-size: 3.5rem;
+    }
+
+    .home-content h3 {
+        font-size: 2rem;
+    }
 }
 
