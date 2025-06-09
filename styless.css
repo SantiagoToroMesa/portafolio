@@ -14,8 +14,11 @@
 /* Ajusta el tamaño base de fuente para facilitar el uso de rem */
 html{
     font-size: 62.5%;
+    scroll-behavior: smooth;
 }
-
+html, body{
+    scroll-behavior: smooth;
+}
 /* Estilos generales del cuerpo: tamaño, color y fondo */
 body{
     width: 100%;
@@ -225,6 +228,11 @@ span{
     border-radius: 20px;
     padding: 2rem;
     text-align: center;
+    opacity: 0;
+    view-timeline-name: --reveal;
+    animation: show 1s ease forwards;
+    animation-timeline: scroll();
+    animation-range: entry 25% cover 50%;
 }
 
 /* Imagen dentro de la tarjeta de proyecto */
@@ -293,6 +301,18 @@ span{
     &::after {
         right: 0;
         left: unset;
+    }
+}
+@keyframes show {
+    from {
+        opacity: 0;
+        scale: 10%;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        scale: 100%;
+        transform: translateY(0);
     }
 }
 /* Media Queries para diseño responsive */
