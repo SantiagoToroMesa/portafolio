@@ -22,6 +22,11 @@ body{
     height: 100vh;
     background-color: white;
     color: black;
+    transition: .3s ease all;
+    &.dark{
+        background-color: #121212;
+        color: white;
+    }
 }
 
 /* Estilos para el encabezado fijo con fondo semi-transparente y sombra */
@@ -47,6 +52,9 @@ header{
     font-weight: 800;
     cursor: pointer; 
     transition:0,5s ease;
+    body.dark & {
+        color: white;
+    }
 }
 
 .logo:hover{
@@ -54,14 +62,23 @@ header{
 }
 
 /* Estilos para los enlaces de navegación con efectos hover y activo */
-nav a{
+nav {
+    display: flex;
+    align-items: center;
+}
+
+nav a {
     font-size: 1.8rem;
     color: rgb(0, 0, 0);
     margin-left: 4rem;
     font-weight: 500;
     transition: 0.3s ease;
     border-bottom: 3px solid transparent;
+    body.dark & {
+        color: white;
+    }
 }
+
 nav a:hover,
 nav a.active{
     color: rgb(0, 0, 0);
@@ -81,6 +98,9 @@ section{
     align-items: center;
     gap:8rem;
     background-color: white;
+    body.dark & {
+        background-color: #121212;
+    }
 }
 .home .home-content h1{
     font-size: 6rem;
@@ -123,6 +143,9 @@ span{
     text-decoration: none;
     color: rgb(0, 0, 0);
     transition: 0.3s;
+    body.dark & {
+        color: white;
+    }
 }
 .social-icons a:hover{
     color: rgb(149, 119, 178);
@@ -170,6 +193,9 @@ span{
     font-weight: 700;
     margin-bottom: 2rem;
     color: rgb(0, 0, 0);
+    body.dark & {
+        color: white;
+    }
 }
 
 /* Estilos para la sección de proyectos: layout flex y espacio */
@@ -178,7 +204,6 @@ span{
     justify-content: center;
     align-items: center;
     gap: 5rem;
-    background-color: white;
 }
 
 /* Título principal de proyectos */
@@ -188,13 +213,15 @@ span{
     font-weight: 700;
     margin-bottom: 2rem;
     color: rgb(0, 0, 0);
+    body.dark & {
+        color: white;
+    }
 }
 
 /* Tarjetas individuales de proyectos con tamaño, fondo y sombra */
 .project-card{
     width: 30rem;
     height: 40rem;
-    background-color: white;
     border-radius: 20px;
     padding: 2rem;
     text-align: center;
@@ -216,6 +243,9 @@ span{
     background: none;
     border: none;
     padding: 0.5rem;
+    body.dark & {
+        color: white;
+    }
 }
 
 .menu-toggle i {
@@ -223,6 +253,48 @@ span{
     font-size: 2.5rem;
 }
 
+.switch {
+    margin-left: 4rem;
+    background: #343D5B;
+    border-radius: 1000px;
+    border: none;
+    position: relative;
+    cursor: pointer;
+    outline: none;
+    display: flex;
+    align-items: center;
+}
+
+.switch span {
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    display: block;
+    background: none;
+    color: white;
+}
+.switch::after{
+    content: '';
+    display: block;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    background: #F1F1F1;
+    top: 0;
+    left: 0;
+    right: unset;
+    border-radius: 100px;
+    transition: 0.3s ease;
+    box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.2);
+}
+.switch.active{
+    background: orange;
+    color: black;
+    &::after {
+        right: 0;
+        left: unset;
+    }
+}
 /* Media Queries para diseño responsive */
 @media (max-width: 768px) {
     html {

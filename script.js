@@ -1,7 +1,11 @@
 document.addEventListener('DOMContentLoaded', () => {
     const menuToggle = document.querySelector('.menu-toggle');
     const nav = document.querySelector('nav');
-
+    const btnswitch = document.querySelector('#switch');
+    btnswitch.addEventListener('click', () => {
+       document.body.classList.toggle('dark');
+         btnswitch.classList.toggle('active');
+    });
     if (menuToggle && nav) {
         menuToggle.addEventListener('click', () => {
             nav.classList.toggle('active');
@@ -24,4 +28,5 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
+
 }); 
